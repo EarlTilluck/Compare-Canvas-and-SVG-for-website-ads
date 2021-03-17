@@ -1,6 +1,6 @@
 # Comparing Canvas and SVG for Website Ads
 Create two animated Ads using Canvas and SVG for an energy drink company. Compare the two technologies.  
-[click here to view the results]()
+[click here to view the results](https://earltilluck.github.io/Compare-Canvas-and-SVG-for-website-ads)
 
 ## Requirements
 Since we are creating an online ad, we need to consider the following:

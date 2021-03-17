@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- link to the external style sheet for this svg -->
+<?xml-stylesheet href="powerpack.css" type="text/css"?>
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg    version="1.1"
+        xmlns="http://www.w3.org/2000/svg" 
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="400px" height="300px" 
+        viewBox="-200 -150 400 300" 
+        preserveAspectRatio="xMidYMid meet">
+    
+    <desc>Power Pack ad by Earl Tilluck, Stacy Mulchan, Katrina Carlton</desc>
+    
+    <defs>
+        <!-- this is the link to the script for the banner ad -->
+        <script xlink:href="powerpack.js" />
+
+        <!-- gradient for background -->
+        <linearGradient id="lgrad" x1="0%" y1="100%" x2="100%" y2="0%" >
+            <stop offset="0%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
+            <stop offset="50%" style="stop-color:rgb(0,128,0);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    
+    <!-- The regular background (with gradient) -->
+    <polygon id="back" points="-200,-150 -200,150 200,150 200,-150" fill="url(#lgrad)"/>
+    
+    <!-- Power Pack text -->
+    <text id="t4" class="ls large" x="-170" y="-60">Power</text>
+    <text id="t5" class="ls large" x="-160" y="40">Pack</text>
+    <text id="t6" class="ls small" x="-180" y="100">www.powerpack.com</text>
+    
+    <!-- Power Pack image -->
+    <image id="bottle" xlink:href="powerpack.png" x="20" y="-140" height="300px" width="150px"/>
+    
+    
+    <!-- The shifting background -->
+    <polygon id="flyBack" points="210,150 1010,150 1210,-150 410,-150"/>
+
+    <!-- the fuel gauge -->
+    <g id="fuel">
+        <!-- half a circle, drawn using a path (this was difficult to figure out) -->
+        <path fill="none" stroke="#ffffff" stroke-width="10" stroke-miterlimit="10" 
+              d="M-80,0 c 10 -100, 150 -100, 160 0"/>
+        <!-- rectange to the center top of the guage -->
+        <rect x="-4" y="-75" fill="#ffffff" width="8" height="16"/>
+        
+        <!-- a plug at the center of the guage (drawn using several shapes on top of each other)-->
+        <!-- base of plug -->
+        <rect x="0" y="-45" fill="#ffffff" width="12" height="10"/>
+        <!-- two pins on the plug -->
+        <rect x="10" y="-43" fill="#ffffff" width="8" height="1"/>
+        <rect x="10" y="-38" fill="#ffffff" width="8" height="1"/>
+        <!-- this circle makes the back of the plug look curved -->
+        <circle fill="#ffffff" cx="0" cy="-40" r="4"/>
+        <!-- A curved line to represent the cord to the back of the plug -->
+        <path fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" 
+              d="M-3,-40 c -2 3, -8 3, -10 0 c -2 -3, -8 -3, -10 0"/>
+        <!-- end of plug graphic -->
+        
+        <!-- Red needle pointer (this will be rotated in animation)-->
+        <polygon id="needle" fill="#ff0000" points="-80,0 0,-5 0,5"/>
+        <!-- center of guage -->
+        <circle stroke="#ffffff" stroke-width="5" stroke-miterlimit="10" cx="0" cy="0" r="12.162"/>
+        <!-- red end point near empty -->
+        <rect x="-90" y="-3" fill="#ff0000" width="20" height="6"/>
+        <!-- green end point near full -->
+        <rect x="70" y="-3" fill="#32cd32" width="20" height="6"/>
+        <!-- E and F text on guage -->
+        <text class="ls guage" x="-110" y="10">E</text>
+        <text class="ls guage" x="95" y="10">F</text>
+    </g>
+    <!-- End of Fuel gauge graphic -->
+    
+        
+    <!-- phase 2 text -->
+    <text id="t1" class="ls green" x="550" y="55">Running on</text>
+    <text id="t2" class="ls green" x="0" y="100">Empty?</text>
+
+    <!-- phase 3 text -->
+    <text id="t3" class="ls green" x="-120" y="65">energize with</text>
+
+    <!-- This makes the ad into a link by drawing an invisible rect inside an anchor tag -->
+    <!-- The rect covers the entire graphic, making it clickable -->
+    <a xmlns="http://www.w3.org/2000/svg" 
+       xlink:href="https://www.google.com/search?q=powerpack" 
+       xmlns:xlink="http://www.w3.org/1999/xlink" 
+       target="blank">
+        
+        <rect x="-200" y="-150" width="400" height="300" fill="rgba(0,0,0,0)"/>
+    </a>
+</svg>

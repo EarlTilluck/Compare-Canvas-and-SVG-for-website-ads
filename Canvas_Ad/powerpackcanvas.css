@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'LeagueSpartan';
+    src:    url('LeagueSpartan.woff2') format('woff2'),
+            url('LeagueSpartan.woff') format('woff'),
+            url('LeagueSpartan.ttf') format('truetype');
+}
+canvas {
+    position: absolute;
+    top: 0; left: 0;
+}

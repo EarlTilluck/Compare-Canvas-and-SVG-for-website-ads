@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'LeagueSpartan';
+    src:    url('LeagueSpartan.woff2') format('woff2'),
+            url('LeagueSpartan.woff') format('woff'),
+            url('LeagueSpartan.ttf') format('truetype');
+}
+
+svg {
+    width: 400px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.ls {
+    font-family: 'LeagueSpartan', Impact, Charcoal, sans-serif;
+}
+
+.green {
+    font-size: 2em;
+    fill: #32cd32;
+}
+
+.large {
+    font-size: 4em;
+    fill: #ffff00;
+}
+
+.small {
+    font-size: 1em;
+    fill: #ffffff;
+}
+.guage {
+    font-size: 1.5em;
+    fill: #ffffff;
+}
+
+text {
+    pointer-events: none;
+}
+
+#flyback {
+    fill: #000000;
+}
+
+#lit1, #lit2, #lit3 {
+    fill: #ffff00;
+    opacity: 0;
+}
+
+#t2, #t3, #fuel {
+    opacity: 0;
+}
